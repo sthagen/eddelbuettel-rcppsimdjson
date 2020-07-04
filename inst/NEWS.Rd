@@ -3,6 +3,33 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppsimdjson/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppsimdjson/issues/#1}{##1}}
 
+\section{Changes in version 0.1.0 (2020-xx-yy)}{
+  \itemize{
+    \item Upgraded to simdjson 0.4.1 (Dirk in \ghpr{27} closing
+    \ghit{26} and \ghit{14}) which adds Windows support
+  }
+}
+    
+\section{Changes in version 0.0.6 (2020-06-25)}{
+  \itemize{
+    \item Created C++ integer-handling utilities for safe downcasting
+    and integer return (Brendan in \ghpr{16} closing \ghit{13}).
+    \item New JSON functions \code{.deserialize_json} and
+    \code{.load_json} (Brendan in \ghpr{16}, \ghpr{17}, \ghpr{20}, \ghpr{21}).
+    \item Upgrade Travis CI to 'bionic', extract package and version
+    from \code{DESCRIPTION} (Dirk in \ghpr{23}).
+    \item Upgraded to simdjson 0.4.0 (Dirk in \ghpr{25} closing \ghit{24}).
+  }
+}
+
+\section{Changes in version 0.0.5 (2020-05-23)}{
+  \itemize{
+    \item Add \code{parseExample} from earlier upstream announcement (Dirk).
+    \item Synced with upstream (Brendan in \ghpr{12}) closing \ghit{11}).
+    \item Updated example \code{parseExample} to API changes (Brendan).
+  }
+}
+
 \section{Changes in version 0.0.4 (2020-04-03)}{
   \itemize{
     \item Upgraded to new upstream releases 0.3 and 0.3.1 (Dirk in \ghpr{9}
