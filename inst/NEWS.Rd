@@ -3,6 +3,24 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppsimdjson/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppsimdjson/issues/#1}{##1}}
 
+\section{Changes in version 0.1.1 (2020-08-10)}{
+  \itemize{
+    \item Corrected incorrect file deletion when mixing local and remote files
+    (Brendan in \ghpr{34}) closing \ghit{33}.
+    \item Added support for raw vectors, compressed files, and compressed
+    downloads (Dirk and Brendan in \ghpr{36}, \ghpr{39}, and \ghpr{45} closing
+    \ghit{35} and addressing issues raised in \ghit{40} and \ghit{44}).
+    \item Examples in two demos are now more self-sufficient (Daniel
+    Lemire and Dirk in \ghpr{42}).
+    \item Expanded query functionality to include single, flat, and nested queries
+    (Brendan in \ghpr{45} closing \ghit{43}).
+    \item Split error handling parameters from \code{error_ok}/\code{on_error}
+    into \code{parse_error_ok}/\code{on_parse_error} and
+    \code{query_error_ok}/\code{on_query_error} (Brendan in \ghpr{45}).
+    \item One-line upstream change to address sanitizer error on cast.
+  }
+}
+
 \section{Changes in version 0.1.0 (2020-07-07)}{
   \itemize{
     \item Upgraded to simdjson 0.4.1 which adds upstream Windows support
@@ -12,11 +30,11 @@
     (Dirk in \ghpr{30}).
     \item Change Travis CI to build matrix over g++ 7, 8, 9, and 10
     (Dirk in \ghpr{31}; and also Brendan in \ghpr{32}).
-    \item New JSON functions \code{fparse} and \code{fload} 
+    \item New JSON functions \code{fparse} and \code{fload}
     (Brendan in \ghpr{32}) closing \ghit{18} and \ghit{10}).
   }
 }
-    
+
 \section{Changes in version 0.0.6 (2020-06-25)}{
   \itemize{
     \item Created C++ integer-handling utilities for safe downcasting
@@ -51,7 +69,7 @@
     \item Created new C++ function to check for unsupported
     architecture, and report the status on package load.
     \item Only run example and unit tests if supported architecture is
-    found. 
+    found.
     \item Created small \code{configure} script to see if R was built
     with C++17 support, and record it in \code{src/Makevars}.
   }
@@ -61,7 +79,7 @@
   \itemize{
     \item Sychronized with upstream (Dirk in \ghpr{4} and \ghpr{5}).
     \item The R side of \code{validateJSON} now globs the file argument,
-    expanding symbols like \code{~} appropriately. 
+    expanding symbols like \code{~} appropriately.
     \item C++ code in \code{validateJSON} now conditional on C++17
     allowing (incomplete) compilation on lesser systems.
     \item New helper function returning value of \code{__cplusplus}
@@ -75,6 +93,6 @@
     \item Comment-out use of \code{stdout} (now updated upstream)
     \item Deactivate use computed GOTOs for compiler compliance and CRAN
   Policy via \code{#define}
-  } 
+  }
 }
 
