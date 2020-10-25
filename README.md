@@ -5,6 +5,7 @@
 [![CRAN](https://www.r-pkg.org/badges/version/RcppSimdJson)](https://cran.r-project.org/package=RcppSimdJson)
 [![Dependencies](https://tinyverse.netlify.com/badge/RcppSimdJson)](https://cran.r-project.org/package=RcppSimdJson)
 [![Downloads](https://cranlogs.r-pkg.org/badges/RcppSimdJson?color=brightgreen)](https://www.r-pkg.org/pkg/RcppSimdJson)
+[![Code Coverage](https://codecov.io/gh/eddelbuettel/RcppSimdJson/graph/badge.svg)](https://codecov.io/gh/eddelbuettel/RcppSimdJson)
 [![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/rcppsimdjson)](https://github.com/eddelbuettel/rcppsimdjson)
 
 ### Motivation
@@ -94,4 +95,4 @@ For the R package, [Dirk Eddelbuettel](https://github.com/eddelbuettel) and [Bre
 Knapp](https://github.com/knapply).
 
 For everything pertaining to simdjson, [Daniel Lemire](https://lemire.me/en/) (and [many
-contributors](https://github.com/lemire/simdjson/graphs/contributors)).
+contributors](https://github.com/simdjson/simdjson/graphs/contributors)).

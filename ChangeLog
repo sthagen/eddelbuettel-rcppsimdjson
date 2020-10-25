@@ -1,3 +1,51 @@
+2020-10-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Add coverage badge
+
+	* .travis.yml: Switch to focal and enable coverage
+
+2020-10-23  Dirk Eddelbuettel  <edd@debian.org>
+
+        * DESCRIPTION (Version, Date): Roll version and date
+
+        * inst/include/simdjson.h: Upgrade to upstream version 0.6.0
+        * inst/include/simdjson.cpp: Ditto
+
+	* inst/tinytest/test_fparse_fload.R: Convert on test to expect_error
+	* inst/tinytest/test_query.R: Idem for three more
+
+2020-10-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (URL, BugReports): Added per Henrik's suggestion
+
+2020-10-07  Dirk Eddelbuettel  <edd@debian.org>
+
+        * DESCRIPTION (Version, Date): Release 0.1.2
+
+	* inst/include/RcppSimdJson/utils.hpp: Add #include for optional
+
+2020-10-06  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/tinytest/test_query.R: Adjust three tests
+	* inst/tinytest/test_fparse_fload.R: Adjust one test
+
+	* README.md: Updated one URL thanks to urlUpdate.r & urlchecker
+
+2020-10-05  Dirk Eddelbuettel  <edd@debian.org>
+
+        * DESCRIPTION (Version, Date): Roll version and date
+
+        * inst/include/simdjson.h: Upgrade to upstream version 0.5.0
+        * inst/include/simdjson.cpp: Ditto
+
+	* inst/include/RcppSimdJson/deserialize.hpp: Replace two at() calls
+	with at_point()
+
+	* R/farse.R: Use leading '/' in query string
+	* man/fparse.Rd: Idem
+	* inst/tinytest/test_fparse_fload.R: Idem
+	* inst/tinytest/test_query.R: Idem
+
 2020-08-11  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Corrected more http URLs to https
