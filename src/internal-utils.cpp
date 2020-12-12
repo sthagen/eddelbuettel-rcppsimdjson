@@ -30,7 +30,7 @@ bool is_valid_query_arg(SEXP query) {
             return Rf_xlength(query) > 0;
         case VECSXP: {
             if (Rf_xlength(query) == 0) {
-                return false;
+                return false;   // #nocov
             } else {
                 for (auto&& element : Rcpp::List(query)) {
                     if (TYPEOF(element) != STRSXP) {
@@ -66,7 +66,7 @@ SEXP diagnose_input(const Rcpp::CharacterVector& x) {
                 if (a_url_prefix == std::string_view("file://")) {
                     is_local_file_url[i] = true;
                 } else {
-                    is_remote_file_url[i] = true;
+                    is_remote_file_url[i] = true; // # nocov
                 }
             }
             if (const auto a_file_ext = rcppsimdjson::utils::get_file_ext(str)) {

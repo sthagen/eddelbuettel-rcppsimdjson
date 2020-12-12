@@ -1,3 +1,69 @@
+2020-12-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/fload.R (fload): Use ... instead of explicit header argument
+	* R/utils.R (.prep_input): Support ... use
+	* man/fparse.Rd: Document ... use
+
+2020-12-04  Dirk Eddelbuettel  <edd@debian.org>
+
+        * DESCRIPTION (Version, Date): Roll version and date
+
+	* R/fload.R (fload): Additional argument 'headers' to pass API headers
+	* R/utils.R (.prep_input): Idem, passes 'headers' on to curl
+	* man/fparse.Rd: Document option
+
+2020-11-01  Dirk Eddelbuettel  <edd@debian.org>
+
+        * DESCRIPTION (Version, Date): Release 0.1.3
+
+	* inst/tinytest/test_compressed_files.R: Add library(RcppSimdJson) to
+	make file self-contained; add temporary directory checks
+	* inst/tinytest/test_issues.R: Add temporary directory checks
+
+2020-11-01  Brendan Knapp  <brendan.g.knapp@gmail.com>
+
+	* src/exported-utils.cpp: Add is_valid_utf8, is_valid_json, and
+	fminify (plus tests, docs, examples)
+	* R/exported-utils.R: Ditto
+	* inst/tinytest/test_simdjson_utils.R: Ditto
+
+	* inst/tinytest/test_fparse_fload: Expand test coverage.
+	* inst/include/RcppSimdJson/deserialize.hpp: Mark one line #nocov
+
+2020-10-31  Brendan Knapp  <brendan.g.knapp@gmail.com>
+
+	* src/simdjson_example.cpp: Macro-guard two Rcout calls in parseExample()
+	against compiling on Clang 9
+
+2020-10-28  Dirk Eddelbuettel  <edd@debian.org>
+
+        * DESCRIPTION (Version, Date): Roll version and date
+
+	* inst/tinytest/test_misc.R: Expand test coverage
+	* src/internal-utils.cpp: Mark one line #nocov
+	* R/init.R (.onAttach): Mark six lines #nocov
+
+2020-10-25  Brendan Knapp  <brendan.g.knapp@gmail.com>
+
+	* R/fparse.R: Add option to "always" return integers as bit64::integer64
+	and disable coverage on unreachable code.
+	* R/fload.R: Ditto
+	* man/fparse.Rd: Ditto
+	* inst/include/RcppSimdJson/deserialize.hpp: Ditto
+	* inst/include/RcppSimdJson/utils.hpp: Ditto
+	* inst/include/RcppSimdJson/deserialize/Type_Doctor.hpp: Ditto
+	* inst/include/RcppSimdJson/deserialize/dataframe.hpp: Ditto
+	* inst/include/RcppSimdJson/deserialize/matrix.hpp: Ditto
+	* inst/include/RcppSimdJson/deserialize/simplify.hpp: Ditto
+	* inst/include/RcppSimdJson/deserialize/vector.hpp: Ditto
+
+	* inst/tinytest/test_deserialization.R: Add "always" bit64::integer64 tests
+	and expand test coverage.
+	* inst/tinytest/test_fparse_fload.R: Ditto
+	* inst/tinytest/test_query.R: Ditto
+
+	* src/internal-utils.cpp: Disable coverage on unreachable code.
+
 2020-10-24  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Add coverage badge
@@ -11,7 +77,7 @@
         * inst/include/simdjson.h: Upgrade to upstream version 0.6.0
         * inst/include/simdjson.cpp: Ditto
 
-	* inst/tinytest/test_fparse_fload.R: Convert on test to expect_error
+	* inst/tinytest/test_fparse_fload.R: Convert one test to expect_error
 	* inst/tinytest/test_query.R: Idem for three more
 
 2020-10-10  Dirk Eddelbuettel  <edd@debian.org>

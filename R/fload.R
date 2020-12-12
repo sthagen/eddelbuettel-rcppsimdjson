@@ -16,6 +16,8 @@
 #' @param compressed_download Whether to request server-side compression on
 #'   the downloaded document, default: \code{FALSE}
 #'
+#' @param ... Optional arguments which can be use \emph{e.g.} to pass additional
+#' header settings
 #'
 #' @examples
 #' # load JSON files ===========================================================
@@ -60,11 +62,12 @@ fload <- function(json,
                   on_query_error = NULL,
                   max_simplify_lvl = c("data_frame", "matrix", "vector", "list"),
                   type_policy = c("anything_goes", "numbers", "strict"),
-                  int64_policy = c("double", "string", "integer64"),
+                  int64_policy = c("double", "string", "integer64", "always"),
                   verbose = FALSE,
                   temp_dir = tempdir(),
                   keep_temp_files = FALSE,
-                  compressed_download = FALSE) {
+                  compressed_download = FALSE,
+                  ...) {
     # validate arguments =======================================================
     if (!.is_valid_json_arg(json)) {
         stop("`json=` must be a non-empty character vector, raw vector, or a list containing raw vectors.")
@@ -134,14 +137,15 @@ fload <- function(json,
     # int64_policy -------------------------------------------------------------
     if (is.character(int64_policy)) {
         int64_policy <- switch(
-            match.arg(int64_policy, c("double", "string", "integer64")),
+            match.arg(int64_policy, c("double", "string", "integer64", "always")),
             double = 0L,
             string = 1L,
             integer64 = 2L,
+            always = 3L,
             stop("Unknown `int64_policy=`.")
         )
     } else if (is.numeric(int64_policy)) {
-        stopifnot(int64_policy %in% 0:2)
+        stopifnot(int64_policy %in% 0:3)
     } else {
         stop("`int64_policy` must be of type `character` or `numeric`.")
     }
@@ -156,7 +160,8 @@ fload <- function(json,
     diagnosis <- .prep_input(json,
                              temp_dir = temp_dir,
                              compressed_download = compressed_download,
-                             verbose = verbose)
+                             verbose = verbose,
+                             ...)
     if (!keep_temp_files) {
         on.exit(unlink(diagnosis$input[diagnosis$is_from_url]), add = TRUE)
     }
