@@ -3,6 +3,25 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppsimdjson/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppsimdjson/issues/#1}{##1}}
 
+\section{Changes in version 0.1.7 (2022-02-18)}{
+  \itemize{
+    \item Two URLs were updated in `README.md`, and Travis artifacts and
+    badges have been removed (Dirk).
+    \item One unit test file was updated to not trigger a 'LENGTH_1'
+    warning (Dirk closing \ghit{76}).
+  }
+}
+
+\section{Changes in version 0.1.6 (2021-09-07)}{
+  \itemize{
+    \item The C++17 dependency was stated more clearly in the
+    DESCRIPTION file (Dirk)
+    \item The simdjson version was updated to release 1.0.0 (Daniel
+    Lemire in \ghpr{70).
+    }
+  }
+}
+
 \section{Changes in version 0.1.5 (2021-02-23)}{
   \itemize{
     \item Temporary filenames from request URLs need an extra
