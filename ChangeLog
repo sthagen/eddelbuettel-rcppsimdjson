@@ -1,3 +1,34 @@
+2023-01-21  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.1.9
+
+	* inst/include/simdjson.cpp: Updated to simdjson 3.0.1
+	* inst/include/simdjson.h: Idem
+
+	* src/simdjson_example.cpp (unsupportedArchitecture): Updated to use
+	'simdjson::get_active_implementation()->name()'
+
+	* .editorconfig: Added
+
+	* configure: Retired and removed
+	* src/Makevars: Moved from Makevars.in, C++17 now default
+
+	* R/validateJSON.R (validateJSON): Simplify with stopifnot()
+	* R/fload.R (fload): Idem
+	* R/fparse.R (fparse): Idem
+
+	* .github/workflows/ci.yaml (jobs): Adust g++ matrix to 10, 11 and 12
+
+2023-01-20  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version and date
+
+	* src/deserialize.cpp: Export for both C++ and R use
+	* src/RcppExports.cpp: Regenerated
+	* R/RcppExports.R: Idem
+	* inst/include/RcppSimdHson_RcppExports.h: Generated
+	* inst/include/RcppSimdHson.h: Idem
+
 2023-01-14  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Update URL for codecov.io badge
@@ -540,4 +571,3 @@
         * README.md: Added
 
         * .Rbuildignore: Exclude the largers example JSON files
-

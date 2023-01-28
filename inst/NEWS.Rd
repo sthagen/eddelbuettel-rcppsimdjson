@@ -3,6 +3,18 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppsimdjson/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppsimdjson/issues/#1}{##1}}
 
+\section{Changes in version 0.1.9 (2023-01-21)}{
+  \itemize{
+    \item The internal function {deseralize_json} is now exported at the C++
+    level as well as in R (Dirk in \ghpr{81} closing \ghit{80}).
+    \item \pkg{simdjson} was upgraded to version 3.0.1 (Dirk in \ghpr{83}).
+    \item The package now defaults to C++17 compilation; \code{configure} has
+    been retired (Dirk closing \ghit{82}).
+    \item The three main R access functions now use a more compact argument
+    check via \code{stopifnot} (Dirk).
+  }
+}
+
 \section{Changes in version 0.1.8 (2022-10-18)}{
   \itemize{
     \item Use the `||` operator instead of `|` on a set of booleans to
@@ -157,4 +169,3 @@
   Policy via \code{#define}
   }
 }
-
