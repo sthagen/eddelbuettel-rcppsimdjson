@@ -33,15 +33,18 @@ jobs:
           - name: gcc-12
             cxx: g++-12
             cc: gcc-12
+          - name: gcc-13
+            cxx: g++-13
+            cc: gcc-13
+          - name: gcc-14
+            cxx: g++-14
+            cc: gcc-14
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Setup
-        uses: eddelbuettel/github-actions/r-ci-setup@master
-
-      - name: Bootstrap
-        run: ./run.sh bootstrap
+        uses: eddelbuettel/github-actions/r-ci@master
 
       - name: Compiler
         run: |
