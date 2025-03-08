@@ -35,8 +35,8 @@ res <- fload(jsonfile)                  # parse a JSON file
 
 ### Comparison
 
-A [simple file-oriented parsing benchmark](demo/simpleBenchmark.R) against the other R-accessible
-JSON parsers:
+A [simple file-oriented parsing benchmark][simpleBenchmark] against the other R-accessible JSON
+parsers:
 
 ```r
 > print(res)
@@ -51,7 +51,7 @@ Unit: microseconds
 >
 ```
 
-Or in chart form, also including the [second benchmark parsing strings](demo/simpleParseBenchmark.R):
+Or in chart form, also including the [second benchmark parsing strings][simpleParseBenchmark.R]:
 
 ![](https://eddelbuettel.github.io/rcppsimdjson/rcppsimdjson_both_benchmarks.png)
 
@@ -90,3 +90,7 @@ Knapp](https://github.com/knapply).
 
 For everything pertaining to simdjson, [Daniel Lemire](https://lemire.me/en/) (and [many
 contributors](https://github.com/simdjson/simdjson/graphs/contributors)).
+
+
+[simpleBenchmark]: https://github.com/eddelbuettel/rcppsimdjson/blob/master/inst/examples/simpleBenchmark.R
+[simpleParseBenchmark]: https://github.com/eddelbuettel/rcppsimdjson/blob/master/inst/examples/simpleParseBenchmark.R

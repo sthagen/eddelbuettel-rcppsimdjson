@@ -1,3 +1,9 @@
+2025-03-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.1.13
+
+	* inst/examples/*: Moved from demo/ to not add eight new Suggests
+
 2025-03-06  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Roll micro version and date

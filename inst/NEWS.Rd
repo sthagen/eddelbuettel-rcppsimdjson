@@ -3,10 +3,21 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppsimdjson/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppsimdjson/issues/#1}{##1}}
 
+
+\section{Changes in version 0.1.13 (2025-03-07)}{
+  \itemize{
+    \item A call to \code{std::string::erase} is now guarded (Daniel)
+    \item The package now uses Authors@R as mandated by CRAN (Dirk)
+    \item \pkg{simdjson} was upgraded to version 3.12.2 (Dirk)
+    \item Continuous integration updated to more compilers and simpler setup
+    \item Two demos are now in \code{inst/examples} to not inflate Suggests
+  }
+}
+
 \section{Changes in version 0.1.12 (2024-07-05)}{
   \itemize{
     \item Updated benchmarks now include `yyjsonr`
-    \item \pkg{simdjson} was upgraded to version 3.95 (Daniel in \ghpr{92}
+    \item \pkg{simdjson} was upgraded to version 3.9.5 (Daniel in \ghpr{92}
     fixing \ghit{91})
     \item Additional small update for C++20 compilation under g++-14
   }
