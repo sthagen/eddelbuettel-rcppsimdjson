@@ -3,6 +3,12 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppsimdjson/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppsimdjson/issues/#1}{##1}}
 
+\section{Changes in version 0.1.14 (2025-09-13)}{
+  \itemize{
+    \item \pkg{simdjson} was upgraded to version 4.0.0 (Dirk in \ghpr{96}
+    \item Continuous integration now relies a token for codecov.io
+  }
+}
 
 \section{Changes in version 0.1.13 (2025-03-07)}{
   \itemize{

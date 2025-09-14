@@ -1,3 +1,14 @@
+2025-09-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.1.14
+
+2025-09-12  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/simdjson.h: Updated to simdjson 4.0.0 (plus 1 commit)
+	* inst/include/simdjson.cpp: Idem
+
+	* .github/workflows/covr.yaml (jobs): Pass CODECOV_TOKEN
+
 2025-03-07  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.1.13
