@@ -1,8 +1,8 @@
 Package: RcppSimdJson
 Type: Package
 Title: 'Rcpp' Bindings for the 'simdjson' Header-Only Library for 'JSON' Parsing
-Version: 0.1.14
-Date: 2025-09-13
+Version: 0.1.15
+Date: 2026-01-14
 Authors@R: c(person("Dirk", "Eddelbuettel", role = c("aut", "cre"), email = "edd@debian.org",
                     comment = c(ORCID = "0000-0001-6419-907X")),
              person("Brendan", "Knapp", role = "aut",
@@ -20,7 +20,6 @@ License: GPL (>= 2)
 Imports: Rcpp, utils
 LinkingTo: Rcpp
 Suggests: bit64, tinytest
-SystemRequirements: A C++17 compiler is required
 URL: https://github.com/eddelbuettel/rcppsimdjson/
 BugReports: https://github.com/eddelbuettel/rcppsimdjson/issues
 RoxygenNote: 7.1.1

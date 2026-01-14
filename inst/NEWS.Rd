@@ -3,6 +3,15 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppsimdjson/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppsimdjson/issues/#1}{##1}}
 
+\section{Changes in version 0.1.15 (2026-01-14)}{
+  \itemize{
+    \item \pkg{simdjson} was upgraded to version 4.2.4 (Dirk in \ghpr{97}
+    \item \code{RcppExports.cpp} was regenerated to aid a \pkg{Rcpp}
+    transition
+    \item Standard maintenance updates for continuous integration and URLs
+  }
+}
+
 \section{Changes in version 0.1.14 (2025-09-13)}{
   \itemize{
     \item \pkg{simdjson} was upgraded to version 4.0.0 (Dirk in \ghpr{96}
