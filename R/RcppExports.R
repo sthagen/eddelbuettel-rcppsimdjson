@@ -31,6 +31,24 @@ fminify <- function(json) {
     .Call(`_RcppSimdJson_dispatch_fminify`, json)
 }
 
+#' Release Memory Kept Between Calls
+#'
+#' To parse faster, \code{fparse()} and \code{fload()} keep some memory between calls: a buffer
+#' holding a copy of the input (as large as the largest document parsed, and released after a
+#' call when larger than 64 MiB), and a small cache of short strings. \code{release_json_memory()}
+#' frees this memory now. It is allocated again as needed, so it is always safe to call.
+#'
+#' @return The number of bytes freed, invisibly.
+#'
+#' @examples
+#' x <- fparse('{"a": [1, 2, 3]}')
+#' release_json_memory()
+#'
+#' @export
+release_json_memory <- function() {
+    invisible(.Call(`_RcppSimdJson_release_json_memory`))
+}
+
 .is_valid_json_arg <- function(json) {
     .Call(`_RcppSimdJson_is_valid_json_arg`, json)
 }
@@ -52,6 +70,10 @@ fminify <- function(json) {
 }
 
 #' Simple JSON Parsing Example
+#'
+#' @usage parseExample()
+#'
+#' @return Nothing is returned, the function is invoked for its side effect.
 #'
 #' This example is adapted from a blogpost announcing an earlier \sQuote{simdjson}
 #' release. It is of interest mostly for the elegance and conciseness of its C++
